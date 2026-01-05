@@ -44,6 +44,7 @@
             color: #e5e5e5;
         }
 
+        /* Efeito de Vidro Fosco Premium */
         .glass-card {
             background: rgba(17, 17, 17, 0.6);
             backdrop-filter: blur(12px);
@@ -52,12 +53,7 @@
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
         }
 
-        .text-gradient-gold {
-            background: linear-gradient(to right, #ffffff, #a1a1aa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
+        /* Botão CTA Ultra Convert */
         .cta-button {
             background: linear-gradient(90deg, #10b981 0%, #059669 100%);
             border: 1px solid #34d399;
@@ -89,6 +85,7 @@
             transition: 0.7s;
         }
 
+        /* Card de Módulos */
         .module-card {
             background: linear-gradient(145deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%);
             border: 1px solid rgba(255,255,255,0.05);
@@ -100,9 +97,31 @@
             transform: translateY(-2px);
         }
 
+        /* Preço Box */
         .price-box {
             background: radial-gradient(circle at center, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
             border: 1px dashed rgba(46, 204, 112, 0.3);
+        }
+
+        /* FAQ Animation Styles */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+            opacity: 0;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 200px; /* Ajuste conforme necessário */
+            opacity: 1;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
         }
     </style>
 </head>
@@ -129,7 +148,7 @@
             <p class="text-green-500 mt-4 text-xs md:text-sm uppercase font-bold tracking-[0.2em]">O Manual de Multiplicação de Caixa</p>
         </div>
 
-        <a href="https://pay.kiwify.com.br/VkKkolj" class="cta-button mb-10 checkout-link text-white font-black text-lg md:text-xl py-5 px-6 rounded-xl flex items-center justify-center gap-3 animate-pulse-glow">
+        <a href="https://pay.kiwify.com.br/73P7C26" class="cta-button mb-10 checkout-link text-white font-black text-lg md:text-xl py-5 px-6 rounded-xl flex items-center justify-center gap-3 animate-pulse-glow">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
             QUERO ENRIQUECER COM JUROS EM 2026
         </a>
@@ -149,7 +168,7 @@
             O MAPA DA RIQUEZA
         </h3>
 
-        <div class="space-y-4 mb-10">
+        <div class="space-y-4 mb-12">
             <div class="module-card p-5 rounded-xl">
                 <h4 class="text-lg font-bold text-white mb-2 flex items-center">
                     <span class="bg-green-600 text-white text-xs px-2 py-1 rounded mr-3 font-black">CAP. 1</span> O Poder Transformador de Emprestar
@@ -187,7 +206,66 @@
             </div>
         </div>
 
-        <div class="price-box p-8 rounded-2xl mb-10 text-center relative overflow-hidden">
+        <div class="mb-12">
+            <h3 class="text-xl font-bold text-center mb-8 text-white tracking-wide">
+                QUEM LEU, APLICOU E <span class="text-green-500">ESTÁ LUCRANDO</span>
+            </h3>
+
+            <div class="space-y-4">
+                <div class="glass-card p-5 rounded-xl border border-white/5 flex gap-4 items-start">
+                    <div class="flex-shrink-0">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gray-800 to-black border border-white/10 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mb-1">
+                            <p class="font-bold text-white text-sm">Roberto M.</p>
+                            <div class="flex text-green-500 text-xs">★★★★★</div>
+                        </div>
+                        <p class="text-gray-400 text-sm leading-snug">
+                            "Eu achava que precisava ser rico pra começar. O manual abriu minha mente. Hoje minha operação roda sozinha e bati <span class="text-green-400 font-bold bg-green-900/20 px-1 rounded">R$ 20k de lucro</span> esse mês."
+                        </p>
+                    </div>
+                </div>
+
+                <div class="glass-card p-5 rounded-xl border border-white/5 flex gap-4 items-start">
+                    <div class="flex-shrink-0">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gray-800 to-black border border-white/10 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mb-1">
+                            <p class="font-bold text-white text-sm">Lucas F.</p>
+                            <div class="flex text-green-500 text-xs">★★★★★</div>
+                        </div>
+                        <p class="text-gray-400 text-sm leading-snug">
+                            "Segui a risca o capítulo sobre começar sem capital. Em 60 dias exatos saí do zero para <span class="text-green-400 font-bold bg-green-900/20 px-1 rounded">R$ 8.000,00 mensais</span>."
+                        </p>
+                    </div>
+                </div>
+
+                <div class="glass-card p-5 rounded-xl border border-white/5 flex gap-4 items-start">
+                    <div class="flex-shrink-0">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gray-800 to-black border border-white/10 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mb-1">
+                            <p class="font-bold text-white text-sm">Felipe D.</p>
+                            <div class="flex text-green-500 text-xs">★★★★★</div>
+                        </div>
+                        <p class="text-gray-400 text-sm leading-snug">
+                            "Eu tinha muito medo de tomar calote. Apliquei a 'Blindagem' do livro e meus recebimentos estão em 100%. <span class="text-white font-bold">Inadimplência ZERO</span>."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="price-box p-8 rounded-2xl mb-12 text-center relative overflow-hidden">
             <div class="absolute top-0 right-0 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">OFERTA LIMITADA</div>
             
             <p class="text-gray-500 text-lg font-semibold mb-2 line-through">DE R$ 297,00</p>
@@ -202,7 +280,7 @@
                 <span class="block text-sm text-gray-500 mt-1">(Menos que um café por mês)</span>
             </p>
             
-            <a href="https://pay.kiwify.com.br/VkKkolj" class="cta-button checkout-link text-white font-black text-lg py-4 px-6 rounded-xl flex items-center justify-center gap-2 w-full hover:scale-105 transition-transform">
+            <a href="https://pay.kiwify.com.br/73P7C26" class="cta-button checkout-link text-white font-black text-lg py-4 px-6 rounded-xl flex items-center justify-center gap-2 w-full hover:scale-105 transition-transform">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" /></svg>
                 GARANTIR MEU MANUAL SECRETO AGORA
             </a>
@@ -210,59 +288,148 @@
             <div class="mt-4 flex justify-center items-center gap-2 text-xs text-gray-500">
                 <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                 <span>Compra 100% Segura</span>
-                <span class="mx-1">•</span>
-                <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                <span>Acesso Imediato</span>
             </div>
-
         </div>
 
-        <footer class="text-center text-gray-600 text-xs mt-8 border-t border-white/5 pt-6">
-            <p class="font-semibold text-gray-500">&copy; 2025 - Jurista: O Segredo para a Riqueza.</p>
-            <p class="mt-2 max-w-md mx-auto leading-relaxed opacity-70">Atenção: Este produto exige dedicação e aplicação do método. Qualquer referência a ganhos passados não deve ser interpretada como uma garantia de resultados futuros.</p>
-        </footer>
+        <div class="mb-12">
+            <h3 class="text-xl font-bold text-center mb-8 text-white tracking-wide">
+                TIRANDO SUAS <span class="text-green-500">DÚVIDAS</span>
+            </h3>
 
+            <div class="space-y-3" id="faq-container">
+                
+                <div class="faq-item glass-card rounded-xl overflow-hidden cursor-pointer" onclick="toggleFAQ(0)">
+                    <div class="p-5 flex justify-between items-center bg-white/5 hover:bg-white/10 transition-colors">
+                        <h4 class="text-white font-bold text-sm md:text-base pr-4">1. Eu preciso ter dinheiro guardado para começar?</h4>
+                        <svg class="w-5 h-5 text-green-500 faq-icon transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <div class="faq-answer bg-black/20">
+                        <div class="p-5 text-gray-400 text-sm leading-relaxed border-t border-white/5">
+                            Não. O livro dedica um capítulo inteiro para ensinar o método de alavancagem, onde você aprende a começar e lucrar mesmo que tenha ZERO reais no bolso hoje.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item glass-card rounded-xl overflow-hidden cursor-pointer" onclick="toggleFAQ(1)">
+                    <div class="p-5 flex justify-between items-center bg-white/5 hover:bg-white/10 transition-colors">
+                        <h4 class="text-white font-bold text-sm md:text-base pr-4">2. E se a pessoa não me pagar? (Calote)</h4>
+                        <svg class="w-5 h-5 text-green-500 faq-icon transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <div class="faq-answer bg-black/20">
+                        <div class="p-5 text-gray-400 text-sm leading-relaxed border-t border-white/5">
+                            É exatamente sobre isso que o Capítulo 3 ("A Arte de Receber") fala. Você vai aprender a filtrar clientes ruins antes de emprestar e técnicas psicológicas de cobrança que tornam a inadimplência quase nula.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item glass-card rounded-xl overflow-hidden cursor-pointer" onclick="toggleFAQ(2)">
+                    <div class="p-5 flex justify-between items-center bg-white/5 hover:bg-white/10 transition-colors">
+                        <h4 class="text-white font-bold text-sm md:text-base pr-4">3. Isso é perigoso? Preciso usar violência?</h4>
+                        <svg class="w-5 h-5 text-green-500 faq-icon transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <div class="faq-answer bg-black/20">
+                        <div class="p-5 text-gray-400 text-sm leading-relaxed border-t border-white/5">
+                            Absolutamente não. O Jurista trabalha com inteligência, não com força bruta. O método ensina como operar de forma segura, discreta e blindada, evitando qualquer tipo de risco físico para você.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item glass-card rounded-xl overflow-hidden cursor-pointer" onclick="toggleFAQ(3)">
+                    <div class="p-5 flex justify-between items-center bg-white/5 hover:bg-white/10 transition-colors">
+                        <h4 class="text-white font-bold text-sm md:text-base pr-4">4. Preciso ter nome limpo ou CNPJ agora?</h4>
+                  <svg class="w-5 h-5 text-green-500 faq-icon transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+</svg>
+</div>
+<div class="faq-answer bg-black/20">
+    <div class="p-5 text-gray-400 text-sm leading-relaxed border-t border-white/5">
+        Não. O método é desenhado para a pessoa física começar informalmente e construir caixa. O livro guia você até o momento certo de profissionalizar e legalizar sua operação quando você já estiver faturando alto.
     </div>
+</div>
+</div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const AFFILIATE_KEY = 'kiwify_aff';
-            const LINK_CLASS = 'checkout-link';
-            // Variável base também atualizada
-            const BASE_CHECKOUT_URL = 'https://pay.kiwify.com.br/VkKkolj';
-            
-            function getAffiliateParamFromUrl() {
-                const urlParams = new URLSearchParams(window.location.search);
-                return urlParams.get('aff');
-            }
+<div class="faq-item glass-card rounded-xl overflow-hidden cursor-pointer" onclick="toggleFAQ(4)">
+    <div class="p-5 flex justify-between items-center bg-white/5 hover:bg-white/10 transition-colors">
+        <h4 class="text-white font-bold text-sm md:text-base pr-4">5. Em quanto tempo vejo o retorno?</h4>
+        <svg class="w-5 h-5 text-green-500 faq-icon transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </div>
+    <div class="faq-answer bg-black/20">
+        <div class="p-5 text-gray-400 text-sm leading-relaxed border-t border-white/5">
+            O modelo foca em recebimentos DIÁRIOS. Diferente de investimentos que demoram meses, aqui o fluxo de caixa é constante. Você empresta hoje e já começa a receber amanhã.
+        </div>
+    </div>
+</div>
+</div>
+</div>
 
-            function saveAffiliate(affValue) {
-                if (affValue) {
-                    localStorage.setItem(AFFILIATE_KEY, affValue);
-                }
-            }
+<footer class="text-center text-gray-600 text-xs mt-8 border-t border-white/5 pt-6">
+    <p class="font-semibold text-gray-500">&copy; 2025 - Jurista: O Segredo para a Riqueza.</p>
+    <p class="p class="mt-2 max-w-md mx-auto leading-relaxed opacity-70">
+        Atenção: Este produto exige dedicação e aplicação do método. O conteúdo tem fins informativos e educacionais.
+    </p>
+</footer>
 
-            function getAffiliateFromStorage() {
-                return localStorage.getItem(AFFILIATE_KEY);
-            }
+</div>
 
-            const urlAffiliate = getAffiliateParamFromUrl();
-            saveAffiliate(urlAffiliate);
-            const activeAffiliate = urlAffiliate || getAffiliateFromStorage();
-            
-            let finalCheckoutUrl = BASE_CHECKOUT_URL;
+<script>
+    // Lógica do FAQ (Accordion)
+    function toggleFAQ(index) {
+        const items = document.querySelectorAll('.faq-item');
+        const clickedItem = items[index];
+        const isActive = clickedItem.classList.contains('active');
 
-            if (activeAffiliate) {
-                finalCheckoutUrl = `${BASE_CHECKOUT_URL}?aff=${activeAffiliate}`;
-                console.log(`[Kiwify Affiliates] Afiliado ativo: ${activeAffiliate}`);
-            }
-
-            const checkoutLinks = document.querySelectorAll(`a.${LINK_CLASS}`);
-            checkoutLinks.forEach(link => {
-                link.href = finalCheckoutUrl;
-            });
+        // Fecha todos
+        items.forEach(item => {
+            item.classList.remove('active');
         });
-    </script>
+
+        // Se não estava ativo, abre o clicado
+        if (!isActive) {
+            clickedItem.classList.add('active');
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Script de afiliados
+        const AFFILIATE_KEY = 'kiwify_aff';
+        const LINK_CLASS = 'checkout-link';
+        const BASE_CHECKOUT_URL = 'https://pay.kiwify.com.br/73P7C26';
+
+        function getAffiliateParamFromUrl() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('aff');
+        }
+
+        function saveAffiliate(affValue) {
+            if (affValue) {
+                localStorage.setItem(AFFILIATE_KEY, affValue);
+            }
+        }
+
+        function getAffiliateFromStorage() {
+            return localStorage.getItem(AFFILIATE_KEY);
+        }
+
+        const urlAffiliate = getAffiliateParamFromUrl();
+        saveAffiliate(urlAffiliate);
+
+        const activeAffiliate = urlAffiliate || getAffiliateFromStorage();
+
+        let finalCheckoutUrl = BASE_CHECKOUT_URL;
+
+        if (activeAffiliate) {
+            finalCheckoutUrl = `${BASE_CHECKOUT_URL}?aff=${activeAffiliate}`;
+            console.log(`[Kiwify Affiliates] Afiliado ativo: ${activeAffiliate}`);
+        }
+
+        const checkoutLinks = document.querySelectorAll(`a.${LINK_CLASS}`);
+        checkoutLinks.forEach(link => {
+            link.href = finalCheckoutUrl;
+        });
+    });
+</script>
 
 </body>
 </html>
